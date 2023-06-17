@@ -1,0 +1,425 @@
+/** Style des pages de menu **/
+
+.hdrpge {
+    z-index: 2;
+
+    &__icon {
+        width: 1em;
+        opacity: 0.5;
+        position: absolute;
+        left: 2em;
+        top: 1.5em;
+    }
+
+    &__logo {
+        width: 9.80em;
+    }
+}
+
+.illustration {
+    height: 16em;
+    @include tablet {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 3.8em;
+        z-index: -2;
+    };
+    @include desktop {
+        width: 100%;
+        position: fixed;
+        top: 3.8em;
+        z-index: -2;
+    };
+    @include desktop-L {
+        width: 100%;
+        position: fixed;
+        top: 3.8em;
+        z-index: -2;
+    };
+
+    
+    &--fit {
+        width: 100%;
+        height: 17em;
+        object-fit: cover;
+        @include tablet {
+            height: 100%;
+        };
+        @include desktop {
+            height: 60em;
+        };
+        @include desktop-L {
+            height: 60em;
+        };
+    }
+}
+
+.main-menu {
+    @include tablet {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 5em;
+        z-index: 0;
+    };
+    @include desktop {
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 7em;
+        z-index: 0;
+    };
+    @include desktop-L {
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 7em;
+        z-index: 0;
+    };
+}
+.blockmenu {
+    position: relative;
+    background-color: $generic-bg;
+    padding-top: 1em;
+    border-radius: 40px 40px 0 0;
+    @include tablet {
+        background-color: transparent;
+        border: 4px solid white;
+        border-radius: 40px;
+        margin: 1em 0 2em 0;
+    };
+    @include desktop {
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-wrap: wrap;
+    };
+    @include desktop-L {
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-wrap: wrap;
+    };
+}
+
+.hdrsections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+        background-color: white;
+        width: 92%;
+        opacity: 0.75;
+        margin-left: .75em;
+        border-radius: 20px;
+        background-color: $generic-bg;
+        border: 3px ridge darken($tertiary-clr, 10%);
+    };
+    @include desktop {
+        width: 100%;
+        background-color: $generic-bg;
+        opacity: 0.75;
+        border-radius: 25px;
+        margin: 1em 20% 5em 20%;
+        border: 3px ridge darken($tertiary-clr, 10%);
+    };
+    @include desktop-L {
+        width: 100%;
+        background-color: $generic-bg;
+        opacity: 0.75;
+        border-radius: 25px;
+        margin: 1em 20% 5em 20%;
+        border: 3px ridge darken($tertiary-clr, 10%);
+    };
+    
+    &__namerestaurant {
+         margin-right: 1em;
+         @include desktop {
+             margin-right: 3em;
+             margin-left: 3em;
+         };
+         @include desktop-L {
+            margin-right: 3em;
+            margin-left: 3em;
+        };
+    }
+
+    &__likecontainer {
+        position: relative;
+        cursor: pointer;
+        
+        &:hover > .hdrsections__likecontainer--empty {
+            animation: fullheart .5s forwards reverse;
+        }
+        
+        &:hover > .hdrsections__likecontainer--full {
+            animation: fullheart .5s forwards;
+        }
+
+        &--empty {
+            margin-right: .5em;
+            width: 2em;
+            position: absolute;
+            right: -2em;
+            top: -1.15em;
+            z-index: 0;
+        }
+
+        &--full {
+            opacity: 0;
+            margin-right: .5em;
+            width: 2em;
+            position: absolute;
+            right: -2em;
+            top: -1.15em;
+            z-index: 1;
+        }
+    }
+}
+.menusection {
+    @include desktop {
+        width: 33%;
+    };
+    @include desktop-L {
+        width: 33%;
+    };
+
+    &__hdr {
+        display: flex;
+        justify-content: center;
+        @include tablet {
+            justify-content: flex-start;
+        };
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            opacity: 0.5;
+            font-weight: normal;
+            width: 10%;
+            margin-right: 15em; 
+            position: relative;
+            @include tablet {
+                background-color: lighten($primary-clr, 25%);
+                opacity: 1;
+                width: auto;
+                padding-left: .5em;
+                padding-right: .5em;
+                border-radius: 20px;
+                margin-left: 1em;
+            };
+            @include desktop {
+                background-color: lighten($primary-clr, 20%);
+                opacity: 1;
+                width: auto;
+                height: 25px;
+                padding-left: .5em;
+                padding-right: .5em;
+                border-radius: 20px;
+                margin-left: 14em;
+                
+                padding-top: .1em;
+            };
+            @include desktop-L {
+                background-color: lighten($primary-clr, 20%);
+                opacity: 1;
+                width: auto;
+                height: 25px;
+                padding-left: .5em;
+                padding-right: .5em;
+                border-radius: 20px;
+                margin-left: 14em;
+                padding-top: .1em;
+            };
+
+            &::before {
+                content:"";
+                background-color: darken($tertiary-clr, 20%);
+                width: 2.5em;
+                height: 0.2em;
+                position: absolute;
+                top: 1.5em;
+                @include desktop {
+                    display: none;
+                }
+                @include desktop-L{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > .btn {
+            @include loadingbtn;
+        }
+
+        
+        &__btn {
+            background-color: white;
+            width: 90%;
+            height: 75px;
+            border-radius: 20px;
+            @include shadow;
+            padding: 0 0 0 1em;
+            margin: .75em; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            
+            &:hover {
+                @include hover-btn--shadow;
+                
+                & > .menusection__block__btn__order {
+                    margin-right: 0;
+                
+                    & > .menusection__block__btn__order__container {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+           
+            @include tablet {
+                width: 23em;
+                box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow; 
+                }
+            };
+
+            @include desktop {
+                box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow; 
+                }
+            };
+
+            @include desktop-L {
+                box-shadow: none;
+
+                &:hover {
+                    @include hover-btn--shadow; 
+                }
+            };
+
+            &__name {
+                width: 85%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                &__title {
+                    font-size: 1em;
+                    margin: 2% 0 0 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                &__details {
+                    margin: 1% 0 2% 0;
+                    opacity: 0.5;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden; 
+                }
+            }
+
+            &__price {
+                width: 25px;
+                font-weight: bold;
+                text-align: center;
+                padding: 1.4em 1.5em 0 1em;
+            }
+
+            &__order {
+                background-color: $tertiary-clr;
+                width: 80px;
+                height: 75px;
+                border-radius: 0 20px 20px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: -5em;
+                transition-duration: .5s;
+
+                &__container {
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 100px;
+                    width: 35px;
+                    transform: rotate(0deg);
+                    transition-duration: .65s;
+
+                    &__icon {
+                        width: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5em 0 5em 0;
+
+    @include desktop {
+        width: 100%;
+        padding: 5em 2em 0em 0;
+    }
+    @include desktop-L {
+        width: 100%;
+        padding: 5em 2em 0em 0;
+    }
+
+    &__btn {
+        @include btn-basic;
+        @include gradation-btn;
+        @include shadow;
+
+        &:hover {
+            @include hover-btn--light;
+            @include hover-btn--shadow;
+        }
+        
+        @include tablet {
+            box-shadow: none;
+        };
+
+        @include desktop {
+            box-shadow: none;
+        };
+        @include desktop-L {
+            box-shadow: none;
+        };
+    }
+}
+
+.footer-menu {
+    @include tablet {
+        position: relative;
+        top: 5em;    
+    };
+    @include desktop {
+        position: relative;
+        top: 15em;
+        padding-left: 2.5%;
+    };
+    @include desktop-L {
+        position: relative;
+        top: 15em;
+        padding-left: 2.5%;
+        };
+
+}

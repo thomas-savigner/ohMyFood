@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>ohmyfood</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="background-loading-spinner">
+            <div class="background-loading-spinner__tray">
+                <div class="background-loading-spinner__tray__glass-container">
+                    <img src="icons/wine-glass-alt-solid.svg" alt="a glass of water"
+                        class="background-loading-spinner__tray__glass-container--icon">
+                </div>
+                <div class="background-loading-spinner__tray__ustensils">
+                    <div class="background-loading-spinner__tray__ustensils__fork-container">
+                        <img src="icons/fork-solid-clr.svg" alt="fork colorised"
+                            class="background-loading-spinner__tray__ustensils__fork-container--icon">
+                    </div>
+                    <div class="background-loading-spinner__tray__ustensils__dish-container">
+                        <div class="background-loading-spinner__tray__ustensils__dish-container--large-dish"></div>
+                        <div class="background-loading-spinner__tray__ustensils__dish-container__timer-container">
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__timer-container--quarter quarter1--1"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__timer-container--quarter quarter1--2"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__timer-container--quarter quarter2--1"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__timer-container--quarter quarter2--2"></div>
+                        </div>
+                        <div class="background-loading-spinner__tray__ustensils__dish-container--small-dish"></div>
+                        <div class="background-loading-spinner__tray__ustensils__dish-container__little-ring-container">
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__little-ring-container--ball-rotate ball-rotation--1"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__little-ring-container--ball-rotate ball-rotation--2"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__little-ring-container--ball-rotate ball-rotation--3"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__little-ring-container--ball-rotate ball-rotation--4"></div>
+                            <div class="background-loading-spinner__tray__ustensils__dish-container__little-ring-container--ball-rotate ball-rotation--5"></div>
+                        </div>
+                    </div>
+                    <div class="background-loading-spinner__tray__ustensils__knife-container">
+                        <img src="icons/knife-solid-clr.svg" alt="knife colorised"
+                            class="background-loading-spinner__tray__ustensils__knife-container--icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="hdrmain hdrindex">
+            <h1>ohmyfood</h1>
+        </header>
+        <main>
+            <section class="localisation">
+                <form class="research">
+                    <img class="research__icon icon" src="icons/map-marker-alt-solid.svg" alt="icon localisation">
+                    <input class="research__input" type="search" placeholder="Paris, Belleville">
+                </form>
+                <div class="research-sublevel">
+                    <h2 class="research-sublevel__title">Réservez le menu qui vous convient</h2>
+                    <p class="research-sublevel__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <a href="#restaurants" class="research-sublevel__btn">Explorer nos restaurants</a>
+                </div>
+            </section>
+            <section class="operating">
+                <header class="operating__hdr">
+                    <h2 class="operating__hdr__title">Fonctionnement</h2>
+                </header>
+                <ol class="operating__list-steps">
+                    <li class="operating__list-steps__item">
+                        <img class="icon operating__list-steps__item__icon" src="icons/mobile-alt-solid.svg" alt="icon smartphone">
+                        <img class="icon operating__list-steps__item__iconhover" src="icons/mobile-alt-solid-primaryclr.svg" alt ="icon smartphone colorised">
+                        <span class="operating__list-steps__item__title">Choisissez un restaurant</span>
+                    </li>
+                    <li class="operating__list-steps__item">
+                        <img class="icon operating__list-steps__item__icon"  src="icons/list-ul-solid.svg" alt="icon list">
+                        <img class="icon operating__list-steps__item__iconhover" src="icons/list-ul-solid-primaryclr.svg" alt="icon list colorised">
+                        <span class="operating__list-steps__item__title">Composez votre menu</span>
+                    </li>
+                    <li class="operating__list-steps__item">
+                        <img class="icon operating__list-steps__item__icon"  src="icons/store-solid.svg" alt="icon store">
+                        <img class="icon operating__list-steps__item__iconhover"  src="icons/store-solid-primaryclr.svg" alt="icon store colorised">
+                        <span class="operating__list-steps__item__title">Dégustez au restaurant</span>
+                    </li>
+                </ol>
+            </section>
+            <section class="restaurants" id="restaurants" >
+                <header class="restaurants__hdr">
+                    <h2 class="restaurants__hdr__title">Restaurants</h2>
+                </header>
+                <div class="container-restaurants">
+                    <div class="container-restaurants__shop">
+                        <a class="container-restaurants__shop__card" href="restaurants/la-palette-du-gout.html">
+                            <div class="container-restaurants__shop__card__img">
+                                <img class="container-restaurants__shop__card__img--format"
+                                    src="images/la-palette-du-gout_restaurant.jpg" 
+                                    alt="A table set with a dish served">
+                                <span class="container-restaurants__shop__card__img--label">Nouveau</span> 
+                            </div>
+                            <div class="container-restaurants__shop__card__legend">
+                                <h3 class="container-restaurants__shop__card__legend--title">La palette du goût</h3>
+                                <p class="container-restaurants__shop__card__legend--adress">Ménilmontant</p>
+                            </div>
+                        </a>
+                        <div class="container-restaurants__shop__likecontainer">
+                            <img src="icons/heart-regular.svg" alt="icon empty" 
+                                class="container-restaurants__shop__likecontainer--empty">
+                            <img src="icons/heart-solid.svg" alt="icon full" 
+                                class="container-restaurants__shop__likecontainer--full">   
+                        </div>
+                    </div>
+                    <div class="container-restaurants__shop">
+                        <a class="container-restaurants__shop__card" href="restaurants/la-note-enchantee.html">
+                            <div class="container-restaurants__shop__card__img">
+                                <img class="container-restaurants__shop__card__img--format" 
+                                    src="images/la-note-enchantee_restaurant.jpg" 
+                                    alt="A dish seen from above">
+                                <span class="container-restaurants__shop__card__img--label">Nouveau</span>
+                            </div>
+                            <div class="container-restaurants__shop__card__legend">
+                                <h3 class="container-restaurants__shop__card__legend--title">La note enchantée</h3>
+                                <p class="container-restaurants__shop__card__legend--adress">Charonne</p>
+                            </div>      
+                        </a>
+                        <div class="container-restaurants__shop__likecontainer">
+                            <img src="icons/heart-regular.svg" alt="icon empty" 
+                                class="container-restaurants__shop__likecontainer--empty">
+                            <img src="icons/heart-solid.svg" alt="icon full" 
+                                class="container-restaurants__shop__likecontainer--full">   
+                        </div>
+                    </div>
+                    <div class="container-restaurants__shop">
+                        <a class="container-restaurants__shop__card" href="restaurants/a-la-francaise.html">
+                            <div class="container-restaurants__shop__card__img">
+                                <img class="container-restaurants__shop__card__img--format"
+                                    src="images/a-la-francaise_restaurant.jpg" 
+                                    alt="Dish with eggs, vegetable and bread">                    
+                            </div>
+                            <div class="container-restaurants__shop__card__legend">
+                                <h3 class="container-restaurants__shop__card__legend--title">À la française</h3>
+                                <p class="container-restaurants__shop__card__legend--adress">Cité Rouge</p>
+                            </div>
+                        </a>
+                        <div class="container-restaurants__shop__likecontainer">
+                            <img src="icons/heart-regular.svg" alt="icon empty" 
+                                class="container-restaurants__shop__likecontainer--empty">
+                            <img src="icons/heart-solid.svg" alt="icon full" 
+                                class="container-restaurants__shop__likecontainer--full">   
+                        </div>
+                    </div>
+                    <div class="container-restaurants__shop">
+                        <a class="container-restaurants__shop__card" href="restaurants/le-delice-des-sens.html">
+                            <div class="container-restaurants__shop__card__img">
+                                <img class="container-restaurants__shop__card__img--format"
+                                    src="images/le-delice-des-sens_restaurant.jpg" 
+                                    alt="A dish served on a rectangular plate">
+                            </div>
+                            <div class="container-restaurants__shop__card__legend">
+                                <h3 class="container-restaurants__shop__card__legend--title">Le délice des sens</h3>
+                                <p class="container-restaurants__shop__card__legend--adress">Folie-Méricourt</p>
+                            </div>
+                        </a>
+                        <div class="container-restaurants__shop__likecontainer">
+                            <img src="icons/heart-regular.svg" alt="icon empty" 
+                                class="container-restaurants__shop__likecontainer--empty">
+                            <img src="icons/heart-solid.svg" alt="icon full" 
+                                class="container-restaurants__shop__likecontainer--full">   
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h4>ohmyfood</h4>
+            <ul class="listfooter">
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">
+                        <img class="linkfooter__icon" src="icons/utensils-solid.svg" 
+                            alt="icon cutlery">Proposer un restaurant</a>
+                </li>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">
+                        <img class="linkfooter__icon" src="icons/hands-helping-solid.svg" 
+                            alt="icon handshake">Devenir partenaire</a>
+                </li>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="">Mentions légales</a>
+                </li>
+                <li class="listfooter__item">
+                    <a class="linkfooter" href="mailto:contact@ohmyfood.com">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

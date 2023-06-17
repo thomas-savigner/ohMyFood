@@ -1,0 +1,176 @@
+@keyframes loading-spinner-end {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+        z-index: -5;
+    }
+}
+
+
+@keyframes timer {
+    
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes ball-rotation {
+    
+    from {
+        transform: rotate(0)
+    };
+
+    to {
+        transform: rotate(1turn)
+    };
+
+}
+
+
+/**--------------------------------**/                                
+
+
+.background-loading-spinner {
+    background-color: $generic-bg;
+    position: fixed;
+    top: 2em;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: loading-spinner-end 3s 2.5s forwards;
+
+    
+    &__tray {
+        width: 85%;
+        max-width: 25em;
+        background-color: darken($generic-bg, 25%);
+        border: ridge 4px lighten($tertiary-clr, 5%);
+        padding: 2.75em 0 4em 0;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__glass-container {
+            
+            &--icon {
+            width: 2em;
+            }
+
+        }
+
+        &__ustensils {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            left: -.75em;
+            top: .75em;
+            width: 17em;
+
+            &__fork-container {
+                position: relative;
+                left: 4em;
+                top: 1em;
+
+                &--icon {
+                    width: 3.75em;
+                }
+            }
+
+            &__dish-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -1em;
+                position: relative;
+                left: 3.2em;
+                top: .55em;
+
+                &--large-dish {
+                    width: 7.25em;
+                    height: 7.25em;
+                    background-color: lighten($primary-clr, 15%);
+                    margin-left: .5em;
+                    border-radius: 75px;
+                }
+
+                &__timer-container {
+                    width: 0;
+                    height: 0;
+                    
+                    &--quarter {
+                        width: 3.175em;
+                        height: 3.175em;
+                        background-color: black;
+                        border-radius: 0 100px 0 0px;
+                        position: relative;
+                        background: radial-gradient(lighten($secundary-clr, 4%), lighten($primary-clr, 20%));
+                    }
+                        
+                    & > .quarter1 {
+
+                        @include star-timer1;
+
+                    }
+
+                    & > .quarter2 {
+
+                        @include star-timer2;
+                    }
+                }
+
+                &--small-dish {
+                    width: 4.5em;
+                    height: 4.5em;
+                    background: radial-gradient($primary-clr, lighten($primary-clr, 25%));
+                    /**background-color: lighten($primary-clr, 25%);**/
+                    border-radius: 50px;
+                    position: relative;
+                    left: -5.85em;
+                    
+                }
+
+                &__little-ring-container {
+
+                    &--ball-rotate {
+                    width: .6em;
+                    height: .6em;
+                    background-color: white;
+                    border-radius: 50px;
+                    position: relative;
+                    }
+
+                    & > .ball-rotation {
+                        
+                        @include rotations-delay;
+                        
+                    }
+                }
+            }
+
+            &__knife-container {
+                position: relative;
+                top: 0.75em;
+                left: -2.75em;
+
+                &--icon {
+                    width: 4em;
+                }
+            }
+        }
+    }
+}
+

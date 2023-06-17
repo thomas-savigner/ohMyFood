@@ -1,0 +1,26 @@
+.research {
+    background-color: $research-bg;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1em 0 1em 1em;
+    height: 5.5em;
+    
+    &__icon {
+        margin-right: 1em;
+        margin-bottom: .5em;
+    }
+    &__input {
+        font-weight: bold;
+        background-color: $research-bg;
+        border-style: none;
+        padding-top: 1%;
+        width: 35%;
+        max-width: 140px;
+        margin-bottom: .4em;
+        
+        @include mini-mobile {
+            width: 40%;
+        }
+    }
+}

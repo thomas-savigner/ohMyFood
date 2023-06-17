@@ -1,0 +1,19 @@
+@mixin loadingbtn {
+    @for $i from 1 through 4 {
+        &--#{$i} {
+            animation: loadingbtnstep .8s 0.2s*$i backwards ease;
+        }
+    }
+}
+
+@keyframes loadingbtnstep {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

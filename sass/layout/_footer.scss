@@ -1,0 +1,43 @@
+footer {
+    background-color: rgb(56, 54, 54);  
+    padding: .75em 0 2.25em 1.2em;
+    color: white;
+    @include tablet {
+        padding-left: 2.5em;
+    };
+    @include desktop {
+        padding-left: 5em;
+    }
+    @include desktop-L {
+        padding-left: 5em;
+    }
+
+    & h4 {
+        font-family: Shrikhand-Regular;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
+
+.listfooter {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    &__item {
+        margin-bottom: 1em;
+    }
+}
+
+.linkfooter {
+    text-decoration: none;
+    color: white;
+    &__icon {
+        width: 0.8rem;
+        margin-right: 1em;
+    }
+}
+
+
+
+
+

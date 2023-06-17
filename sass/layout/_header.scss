@@ -1,0 +1,12 @@
+.hdrmain {
+    width: 100%;
+    padding: .75em 0;
+    height: 2.25em;
+    background-color: white;
+    border-bottom: 2px inset $shadow; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    z-index: 1;
+}
