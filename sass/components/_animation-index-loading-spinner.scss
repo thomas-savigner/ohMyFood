@@ -54,7 +54,7 @@
     
     &__tray {
         width: 85%;
-        max-width: 25em;
+        max-width: 10em;
         background-color: darken($generic-bg, 25%);
         border: ridge 4px lighten($tertiary-clr, 5%);
         padding: 2.75em 0 4em 0;
@@ -75,9 +75,9 @@
         &__ustensils {
             display: flex;
             justify-content: center;
-            position: relative;
-            left: -.75em;
-            top: .75em;
+            //position: relative;
+            //left: -.75em;
+            //top: .75em;
             width: 17em;
 
             &__fork-container {
@@ -96,7 +96,7 @@
                 align-items: center;
                 margin-top: -1em;
                 position: relative;
-                left: 3.2em;
+                left: 8.5em;
                 top: .55em;
 
                 &--large-dish {
