@@ -1,6 +1,9 @@
-![logo](logo/ohmyfood@2x.svg)
+<div style="background-color: white; padding-top:10px" align="center">
 
-# Ohmyfood - OpenClassrooms Project 3/7
+[![logo](/logo/ohmyfood@2x.svg "logo")](https://thomas-savigner.github.io/ohMyFood/)
+</div>
+
+# Ohmyfood - Responsive Website
 
 Ohmyfood, a platform originally from New York for pre-ordering menus from gourmet restaurants, is expanding to Paris. The task is to create the first version of a responsive website based on a mobile graphic mockup. Then, animations must be included to give a first glimpse of the site when it is fully developed and functional.
 
