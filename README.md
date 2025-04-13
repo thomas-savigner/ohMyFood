@@ -28,7 +28,9 @@ Static and responsive website for the Ohmyfood platform, developed using HTML an
 
 ## Setup & Installation
 
-1.  Clone the repository: `git clone [<your-repository-url>](https://github.com/thomas-savigner/ohMyFood.git)`
+1.  Clone the repository: `git clone https://github.com/thomas-savigner/ohMyFood.git`
+    *   Or download the ZIP file and extract it.
+    *   If using GitHub Desktop, click on "Clone repository" and paste the URL.
 2.  Navigate to the project directory: `cd ohMyFood`
 3.  If using Sass for compilation:
     *   Install Sass (if not already installed): `npm install -g sass` (or use a GUI compiler)
